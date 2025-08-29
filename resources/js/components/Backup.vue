@@ -3,15 +3,15 @@
         <td class="px-2 py-2 border-t border-gray-100 dark:border-gray-700 whitespace-nowrap cursor-pointer dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900">{{ path }}</td>
         <td class="px-2 py-2 border-t border-gray-100 dark:border-gray-700 whitespace-nowrap cursor-pointer dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900">{{ date }}</td>
         <td class="px-2 py-2 border-t border-gray-100 dark:border-gray-700 whitespace-nowrap cursor-pointer dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900">{{ size }}</td>
-        <td class="px-2 py-2 border-t border-gray-100 dark:border-gray-700 whitespace-nowrap cursor-pointer dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900 text-right flex items-center justify-center">
+        <td class="px-2 py-2 border-t border-gray-100 dark:border-gray-700 whitespace-nowrap cursor-pointer dark:bg-gray-800 group-hover:bg-gray-50 dark:group-hover:bg-gray-900 text-right">
             <a
                 :href="downloadUrl"
                 target="_blank"
                 rel="noopener nofollow"
                 :title="__('Download')"
-                class="inline-flex items-center justify-center h-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
+                class="appearance-none cursor-pointer text-70 hover:text-primary mr-3"
             >
-                <icon type="download" view-box="0 0 24 24" width="24" height="24" />
+                <icon type="download" view-box="0 0 24 24" width="20" height="20" />
             </a>
             <button
                 :title="__('Restore')"
@@ -22,13 +22,13 @@
             </button>
             <button
                 :title="__('Delete')"
-                class="inline-flex items-center justify-center h-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
+                class="appearance-none mr-3"
                 :class="deletable ? 'text-70 hover:text-primary' : 'cursor-default text-40'"
                 :disabled="!deletable"
                 v-if="deletable"
                 @click.prevent="$emit('delete')"
             >
-                <icon type="trash" view-box="0 0 24 24" width="24" height="24" />
+                <Icon name="trash" />
             </button>
         </td>
     </tr>
