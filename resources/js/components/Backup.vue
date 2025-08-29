@@ -11,14 +11,14 @@
                 :title="__('Download')"
                 class="appearance-none cursor-pointer text-70 hover:text-primary mr-3"
             >
-                <icon type="download" view-box="0 0 24 24" width="20" height="20" />
+                <Icon type="download" view-box="0 0 24 24" width="20" height="20" />
             </a>
             <button
                 :title="__('Restore')"
                 class="inline-flex items-center justify-center h-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
                 @click.prevent="$emit('restore')"
             >
-                <icon type="refresh" view-box="0 0 24 24" width="24" height="24" />
+                <Icon type="refresh" view-box="0 0 24 24" width="24" height="24" />
             </button>
             <button
                 :title="__('Delete')"
