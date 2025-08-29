@@ -13,23 +13,22 @@
             >
                 <icon type="download" view-box="0 0 24 24" width="24" height="24" />
             </a>
-            <button
+            <SimpleButton
                 :title="__('Restore')"
                 class="inline-flex items-center justify-center h-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
                 @click.prevent="$emit('restore')"
             >
                 <icon type="refresh" view-box="0 0 24 24" width="24" height="24" />
-            </button>
-            <button
+            </SimpleButton>
+            <SimpleButton
                 :title="__('Delete')"
                 class="inline-flex items-center justify-center h-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
-                :class="deletable ? 'text-70 hover:text-primary' : 'cursor-default text-40'"
                 :disabled="!deletable"
-                v-if="deletable"
                 @click.prevent="$emit('delete')"
+                v-if="deletable"
             >
                 <icon type="trash" view-box="0 0 24 24" width="24" height="24" />
-            </button>
+            </SimpleButton>
         </td>
     </tr>
 </template>
@@ -37,6 +36,7 @@
 <script setup>
 import { Icon } from 'laravel-nova-ui';
 import { computed } from 'vue';
+import SimpleButton from './SimpleButton.vue';
 
 const props = defineProps({
     date: { required: true },
