@@ -9,7 +9,7 @@
                 target="_blank"
                 rel="noopener nofollow"
                 :title="__('Download')"
-                class="appearance-none cursor-pointer text-70 hover:text-primary mr-3"
+                class="appearance-none cursor-pointer text-70 hover:text-primary mr-3 inline-flex dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
             >
                 <Icon name="download" view-box="0 0 24 24" width="20" height="20" />
             </a>
@@ -22,7 +22,7 @@
             </button>
             <button
                 :title="__('Delete')"
-                class="appearance-none mr-3"
+                class="appearance-none mr-3 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500"
                 :class="deletable ? 'text-70 hover:text-primary' : 'cursor-default text-40'"
                 :disabled="!deletable"
                 v-if="deletable"
